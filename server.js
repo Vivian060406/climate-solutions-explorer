@@ -8,7 +8,7 @@
 * 
 *  Name: Khanh Vy Tran   Student ID: 120175245   Date: 7/10/2026
 *
-*  Published URL: 
+*  Published URL: https://web-322-assignment2-gamma.vercel.app/
 
 ********************************************************************************/
 const express = require("express");
