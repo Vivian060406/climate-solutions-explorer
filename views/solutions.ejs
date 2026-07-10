@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en" data-theme="dim">
+<head>
+    <meta charset="utf-8">
+    <title>Solutions</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="container mx-auto px-6">
+
+        <div class="hero bg-base-200 rounded-lg my-6">
+            <div class="hero-content text-center">
+                <div>
+                    <h1 class="text-5xl font-bold">Explore Solutions</h1>
+                    <p class="my-4">Browse climate solutions by sector or view all available solutions.</p>
+
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <a href="/explorer/solutions?sector=Electricity" class="btn btn-sm btn-primary">Electricity</a>
+                        <a href="/explorer/solutions?sector=Transportation" class="btn btn-sm btn-primary">Transportation</a>
+                        <a href="/explorer/solutions?sector=Industry" class="btn btn-sm btn-primary">Industry</a>
+                        <a href="/explorer/solutions?sector=Agriculture" class="btn btn-sm btn-primary">Agriculture</a>
+                        <a href="/explorer/solutions?sector=Nature-Based Carbon Removal" class="btn btn-sm btn-primary">Nature-Based Carbon Removal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="table table-zebra">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Sector</th>
+                        <th>Type</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% solutions.forEach((solution) => { %>
+                        <tr>
+                            <td><%= solution.title %></td>
+                            <td>
+                                <a href="/explorer/solutions?sector=<%= solution.sector %>" class="btn btn-sm btn-outline">
+                                    <%= solution.sector %>
+                                </a>
+                            </td>
+                            <td><%= solution.solution_type %></td>
+                            <td>
+                                <a href="/explorer/solutions/<%= solution.id %>" class="btn btn-sm btn-primary">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

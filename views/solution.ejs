@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en" data-theme="dim">
+<head>
+    <meta charset="utf-8">
+    <title><%= solution.title %></title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="container mx-auto px-6">
+
+        <div class="hero bg-base-200 rounded-lg my-6">
+            <div class="hero-content text-center">
+                <div>
+                    <h1 class="text-5xl font-bold"><%= solution.title %></h1>
+                    <p class="my-4">
+                        Below, you will find detailed information about the solution: <%= solution.title %>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl mb-6">
+            <figure>
+                <img src="<%= solution.feature_img_url %>" alt="<%= solution.title %>">
+            </figure>
+
+            <div class="card-body">
+                <h2 class="card-title"><%= solution.title %></h2>
+
+                <p><%= solution.intro_short %></p>
+
+                <p>
+                    <strong>Type:</strong> <%= solution.solution_type %>
+                </p>
+
+                <p>
+                    <strong>Impact:</strong> <%= solution.impact %>
+                </p>
+
+                <p>
+                    <a href="<%= solution.original_source_url %>" class="link link-primary" target="_blank">
+                        Learn more from the original source
+                    </a>
+                </p>
+
+                <div class="card-actions justify-end">
+                    <a href="#" onclick="history.back(); return false;" class="btn btn-primary">
+                        Back
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-info mb-6">
+            <span id="quote">Loading quote...</span>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("https://dummyjson.com/quotes/random")
+                .then((response) => response.json())
+                .then((data) => {
+                    document.getElementById("quote").textContent =
+                        `"${data.quote}" - ${data.author}`;
+                })
+                .catch(() => {
+                    document.getElementById("quote").textContent =
+                        "Unable to load quote.";
+                });
+        });
+    </script>
+</body>
+</html>
