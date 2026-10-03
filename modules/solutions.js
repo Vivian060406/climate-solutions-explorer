@@ -1,9 +1,6 @@
  //******************************************
- // Assignment 1
  // Name: Khanh Vy Tran
- // StudentID: 120175245
  // File: solutions.js
- // Date: 6/3/2026
  //******************************************/
 const solutionData = require("../data/solutionData");
 const sectorData = require("../data/sectorData");
