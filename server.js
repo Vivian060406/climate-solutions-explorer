@@ -6,7 +6,7 @@
 * 
 *  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
 * 
-*  Name: Khanh Vy Tran   Student ID: 120175245   Date: 7/10/2026
+*  Name: Khanh Vy Tran   
 *
 *  Published URL: https://web-322-assignment2-gamma.vercel.app/
 
