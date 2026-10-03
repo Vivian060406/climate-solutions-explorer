@@ -5,7 +5,13 @@ A web application for exploring climate solutions across different sectors, with
 🔗 **Live Demo:** https://web-322-assignment2-gamma.vercel.app/
 
 ---
+## 📸 Preview
 
+<p align="center">
+  <img src="./climate-solutions-preview.png" width="100%" alt="Climate Solutions Explorer homepage">
+</p>
+
+---
 ## 📖 About
 
 Climate Solutions Explorer is a server-side web application built with Node.js and Express.js.
